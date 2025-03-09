@@ -51,7 +51,7 @@ JUMP-IN handles the entire migration workflow:
 
 ### Download Options
 
-1. **Direct Download**: Get the latest release from our [Releases page](https://github.com/IRL-tools/jump-in/releases)
+1. **Direct Download**: Get the latest release from our [Releases page](https://github.com/pathaksomesh06/JUMP-IN/releases/tag/v1.0)
 
 ## Usage Guide
 
@@ -94,7 +94,7 @@ JUMP-IN requires administrator privileges to remove MDM profiles and install the
 
 If you encounter issues or have questions about JUMP-IN:
 
-- Open an [issue on GitHub](https://github.com/IRL-tools/jump-in/issues)
+- Open an issue
 ## Contributing
 
 Contributions to JUMP-IN are always Welecome!
