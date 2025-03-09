@@ -20,7 +20,7 @@ struct TenantSwitcherApp: App {
             return // Skip the admin privileges check
         }
         
-        // Check if running as root or if we're already in a relaunch attempt
+        // Check if running as root
         let isRoot = getuid() == 0
         let launchedByAdmin = ProcessInfo.processInfo.environment["SUDO_USER"] != nil
         let isAdminRelaunch = ProcessInfo.processInfo.arguments.contains("--admin-relaunch")
