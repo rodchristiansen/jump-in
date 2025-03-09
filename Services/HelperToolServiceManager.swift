@@ -353,7 +353,7 @@ final class HelperToolServiceManager: ObservableObject {
        logger.info("Manual helper tool installation completed")
    }
    
-   // Add these new methods here
+  
    private func startHelperService() async throws {
        logger.info("Attempting to start helper service that is installed but not running")
        
@@ -415,7 +415,7 @@ final class HelperToolServiceManager: ObservableObject {
             logger.info("[DEBUG] Launch log entries: \(output)")
         }
         
-        // Original check code continues...
+        
         let script = """
         do shell script "launchctl list | grep \(helperToolBundleId) || echo 'NOT_RUNNING'"
         """
@@ -625,8 +625,6 @@ final class HelperToolServiceManager: ObservableObject {
 }
 
 // MARK: - Debug Helper Tool Implementation (DEBUG only)
-// Implementation for the debug helper tool that doesn't rely on Terminal
-// This should be placed in the HelperToolServiceManager.swift file, replacing the current DebugHelperTool class
 
 #if DEBUG
 class DebugHelperTool: NSObject, HelperToolProtocol {
@@ -714,57 +712,57 @@ class DebugHelperTool: NSObject, HelperToolProtocol {
     
     private func performAlternativeProfileRemoval(reply: @escaping (Error?) -> Void) {
         logger.info("[DEBUG] Attempting alternative profile removal approach")
-        // Implementation from the original file
+        
         reply(nil) // For brevity
     }
     
     func backupTenantSettings(withReply reply: @escaping (String?, Error?) -> Void) {
         logger.info("[DEBUG] Simulating tenant settings backup")
-        // Implementation from the original file
+        
         reply("/tmp/tenant-backup-test", nil) // For brevity
     }
     
     func updateCompanyPortal(withReply reply: @escaping (Error?) -> Void) {
         logger.info("[DEBUG] Simulating Company Portal update")
-        // Implementation from the original file
+        
         reply(nil) // For brevity
     }
     
     func enrollInNewTenant(targetTenant: String, withReply reply: @escaping (Error?) -> Void) {
         logger.info("[DEBUG] Starting enrollment in tenant: \(targetTenant)")
-        // Implementation from the original file
+        
         reply(nil) // For brevity
     }
     
     func rotateFileVaultKey(withReply reply: @escaping (Error?) -> Void) {
         logger.info("[DEBUG] Simulating FileVault key rotation")
-        // Implementation from the original file
+        
         reply(nil) // For brevity
     }
     @available(macOS 12.0, *)
     func secureRotateFileVaultKey(withReply reply: @escaping (Error?) -> Void) {
         logger.info("[DEBUG] Performing debug secure FileVault key rotation")
-        // In debug mode, we just simulate the operation succeeding
+        
         reply(nil)
     }
     
     func checkIntuneEnrollment(withReply reply: @escaping (Bool) -> Void) {
-        // Implementation from the original file
+        
         reply(true) // For brevity, assume enrolled in debug mode
     }
     
     func checkFileVaultStatus(withReply reply: @escaping (Bool) -> Void) {
-        // Implementation from the original file
+        
         reply(true) // For brevity
     }
     
     func checkGatekeeperStatus(withReply reply: @escaping (Bool) -> Void) {
-        // Implementation from the original file
+        
         reply(true) // For brevity
     }
     
     func getCurrentUser(withReply reply: @escaping (String) -> Void) {
-        // Implementation from the original file
+        
         reply("debuguser") // For brevity
     }
     
