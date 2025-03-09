@@ -36,7 +36,7 @@ class PrivilegeManager: ObservableObject {
         rights.count = UInt32(items.count)
         rights.items = UnsafeMutablePointer(mutating: items)
         
-        // Note: The call to AuthorizationCreate has been corrected
+        
         let status = AuthorizationCreate(&rights, nil, flags, &authRef)
         guard status == errAuthorizationSuccess else {
             logger.error("Failed to create authorization reference")
