@@ -11,7 +11,7 @@ import SwiftUI
 struct macOS_Tenant_SwitcherApp: App {
     var body: some Scene {
         WindowGroup {
-            MigrationContentView() // Use your renamed view
+            MigrationContentView() 
         }
     }
 }
