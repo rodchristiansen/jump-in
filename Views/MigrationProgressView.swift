@@ -15,7 +15,7 @@ struct MigrationProgressView: View {
     private let logger = Logger.shared
     private let mdmDetectionService = MDMDetectionService.shared
     
-    // Check if we should show completion UI
+    // Show completion UI
     private var showCompletionUI: Bool {
         if case .completed = migrationService.currentStatus {
             return true
@@ -75,7 +75,7 @@ struct MigrationProgressView: View {
                 VStack(spacing: 15) {
                     Button("FileVault Setup") {
                         do {
-                            // Locate the "reissue key.sh" script in your app's Resources
+                            // Locate the "reissue key.sh" script in app's Resources
                             guard let resourceURL = Bundle.main.url(forResource: "reissue key", withExtension: "sh") else {
                                 let alert = NSAlert()
                                 alert.messageText = "Script Not Found"
