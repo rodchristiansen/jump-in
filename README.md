@@ -1,5 +1,5 @@
 # JUMP-IN: Just Upgrade & Migrate to Intune
-
+© Somesh Pathak
 
 ## Overview
 
