@@ -1,0 +1,916 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB3D29672D65CE2F00F9463C /* PropertyListModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29662D65CE2F00F9463C /* PropertyListModifier.swift */; };
+		FB3D296A2D65CE4200F9463C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29692D65CE4200F9463C /* Logger.swift */; };
+		FB3D296C2D65CE5300F9463C /* MigrationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D296B2D65CE5300F9463C /* MigrationTypes.swift */; };
+		FB3D29732D65CE7700F9463C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D296F2D65CE7700F9463C /* AppState.swift */; };
+		FB3D29742D65CE7700F9463C /* SystemRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29712D65CE7700F9463C /* SystemRequirements.swift */; };
+		FB3D29752D65CE7700F9463C /* MigrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29702D65CE7700F9463C /* MigrationState.swift */; };
+		FB3D297F2D65CE8000F9463C /* PrivilegeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29792D65CE8000F9463C /* PrivilegeManager.swift */; };
+		FB3D29802D65CE8000F9463C /* TenantSwitcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29782D65CE8000F9463C /* TenantSwitcherApp.swift */; };
+		FB3D29812D65CE8000F9463C /* PreRequisitesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D297B2D65CE8000F9463C /* PreRequisitesView.swift */; };
+		FB3D29822D65CE8000F9463C /* RequestPrivilegesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29772D65CE8000F9463C /* RequestPrivilegesView.swift */; };
+		FB3D29832D65CE8000F9463C /* MigrationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D297D2D65CE8000F9463C /* MigrationContentView.swift */; };
+		FB3D29842D65CE8000F9463C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D297C2D65CE8000F9463C /* WelcomeView.swift */; };
+		FB3D29852D65CE8000F9463C /* MigrationProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D297A2D65CE8000F9463C /* MigrationProgressView.swift */; };
+		FB3D29862D65CE8000F9463C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29762D65CE8000F9463C /* SplashView.swift */; };
+		FB3D298D2D65CE8900F9463C /* HelperToolServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29872D65CE8900F9463C /* HelperToolServiceManager.swift */; };
+		FB3D298E2D65CE8900F9463C /* MigrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D298B2D65CE8900F9463C /* MigrationService.swift */; };
+		FB3D298F2D65CE8900F9463C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D298A2D65CE8900F9463C /* NotificationService.swift */; };
+		FB3D29902D65CE8900F9463C /* DialogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29882D65CE8900F9463C /* DialogService.swift */; };
+		FB3D29912D65CE8900F9463C /* PrivilegedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29892D65CE8900F9463C /* PrivilegedService.swift */; };
+		FB3D29962D65CE9600F9463C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB3D29932D65CE9600F9463C /* Info.plist */; };
+		FB491BDD2D7CA8CA00F95204 /* filevaultrotationview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB491BDC2D7CA8CA00F95204 /* filevaultrotationview.swift */; };
+		FB544A042D75C264002EB8EE /* MDMDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB544A032D75C264002EB8EE /* MDMDetectionService.swift */; };
+		FB544A062D75C2A2002EB8EE /* MDMVendorRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB544A052D75C2A2002EB8EE /* MDMVendorRegistry.swift */; };
+		FB544A082D75C324002EB8EE /* MDMVendorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB544A072D75C324002EB8EE /* MDMVendorHandler.swift */; };
+		FB544A0A2D75C35B002EB8EE /* MDMMigrationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB544A092D75C35B002EB8EE /* MDMMigrationStrategy.swift */; };
+		FB544A0C2D75C387002EB8EE /* ConfigurationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB544A0B2D75C387002EB8EE /* ConfigurationMapper.swift */; };
+		FB87521F2D76FB63007B94B9 /* PrivilegedTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB87521E2D76FB63007B94B9 /* PrivilegedTaskManager.swift */; };
+		FB8752212D773817007B94B9 /* SecureFileVaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8752202D773817007B94B9 /* SecureFileVaultManager.swift */; };
+		FBA31C7B2D73AC1400D807F3 /* tenant_migration.sh in Resources */ = {isa = PBXBuildFile; fileRef = FBA31C7A2D73AC0100D807F3 /* tenant_migration.sh */; };
+		FBA31C812D73AD6000D807F3 /* ScriptMigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA31C802D73AD6000D807F3 /* ScriptMigrationManager.swift */; };
+		FBAC7A912D65F7270098788D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D29692D65CE4200F9463C /* Logger.swift */; };
+		FBAC7A922D65F72D0098788D /* MigrationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D296B2D65CE5300F9463C /* MigrationTypes.swift */; };
+		FBAC7B072D66235E0098788D /* com.IRL.jump-in.helper in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB3D299B2D65D00000F9463C /* com.IRL.jump-in.helper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		FBB5C34D2D7DC21C006498F0 /* reissueKey.sh in Resources */ = {isa = PBXBuildFile; fileRef = FBB5C34C2D7DC21C006498F0 /* reissueKey.sh */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB3D29322D65C79100F9463C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB3D29182D65C79000F9463C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB3D291F2D65C79000F9463C;
+			remoteInfo = "macOS-Tenant-Switcher";
+		};
+		FB3D293C2D65C79100F9463C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB3D29182D65C79000F9463C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB3D291F2D65C79000F9463C;
+			remoteInfo = "macOS-Tenant-Switcher";
+		};
+		FBAC7B0B2D6626110098788D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB3D29182D65C79000F9463C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB3D299A2D65D00000F9463C;
+			remoteInfo = "macOS-Tenant-Switcher-Helper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FB3D29992D65D00000F9463C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		FBAC7B062D6623440098788D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				FBAC7B072D66235E0098788D /* com.IRL.jump-in.helper in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBAC7B082D6623680098788D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchDaemons;
+			dstSubfolderSpec = 1;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FB3D29202D65C79000F9463C /* JUMP-IN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JUMP-IN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB3D29312D65C79100F9463C /* JUMP-INTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JUMP-INTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB3D293B2D65C79100F9463C /* JUMP-INUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JUMP-INUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB3D29662D65CE2F00F9463C /* PropertyListModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListModifier.swift; sourceTree = "<group>"; };
+		FB3D29692D65CE4200F9463C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		FB3D296B2D65CE5300F9463C /* MigrationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationTypes.swift; sourceTree = "<group>"; };
+		FB3D296E2D65CE6E00F9463C /* ShellCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellCommand.swift; sourceTree = "<group>"; };
+		FB3D296F2D65CE7700F9463C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		FB3D29702D65CE7700F9463C /* MigrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationState.swift; sourceTree = "<group>"; };
+		FB3D29712D65CE7700F9463C /* SystemRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemRequirements.swift; sourceTree = "<group>"; };
+		FB3D29762D65CE8000F9463C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		FB3D29772D65CE8000F9463C /* RequestPrivilegesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPrivilegesView.swift; sourceTree = "<group>"; };
+		FB3D29782D65CE8000F9463C /* TenantSwitcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantSwitcherApp.swift; sourceTree = "<group>"; };
+		FB3D29792D65CE8000F9463C /* PrivilegeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegeManager.swift; sourceTree = "<group>"; };
+		FB3D297A2D65CE8000F9463C /* MigrationProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationProgressView.swift; sourceTree = "<group>"; };
+		FB3D297B2D65CE8000F9463C /* PreRequisitesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreRequisitesView.swift; sourceTree = "<group>"; };
+		FB3D297C2D65CE8000F9463C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		FB3D297D2D65CE8000F9463C /* MigrationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationContentView.swift; sourceTree = "<group>"; };
+		FB3D29872D65CE8900F9463C /* HelperToolServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperToolServiceManager.swift; sourceTree = "<group>"; };
+		FB3D29882D65CE8900F9463C /* DialogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogService.swift; sourceTree = "<group>"; };
+		FB3D29892D65CE8900F9463C /* PrivilegedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegedService.swift; sourceTree = "<group>"; };
+		FB3D298A2D65CE8900F9463C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		FB3D298B2D65CE8900F9463C /* MigrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationService.swift; sourceTree = "<group>"; };
+		FB3D29932D65CE9600F9463C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB3D299B2D65D00000F9463C /* com.IRL.jump-in.helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "com.IRL.jump-in.helper"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB3D29C12D65D13200F9463C /* jump-in.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "jump-in.entitlements"; sourceTree = "<group>"; };
+		FB491BDC2D7CA8CA00F95204 /* filevaultrotationview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filevaultrotationview.swift; sourceTree = "<group>"; };
+		FB544A032D75C264002EB8EE /* MDMDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMDetectionService.swift; sourceTree = "<group>"; };
+		FB544A052D75C2A2002EB8EE /* MDMVendorRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMVendorRegistry.swift; sourceTree = "<group>"; };
+		FB544A072D75C324002EB8EE /* MDMVendorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMVendorHandler.swift; sourceTree = "<group>"; };
+		FB544A092D75C35B002EB8EE /* MDMMigrationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMMigrationStrategy.swift; sourceTree = "<group>"; };
+		FB544A0B2D75C387002EB8EE /* ConfigurationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationMapper.swift; sourceTree = "<group>"; };
+		FB87521E2D76FB63007B94B9 /* PrivilegedTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegedTaskManager.swift; sourceTree = "<group>"; };
+		FB8752202D773817007B94B9 /* SecureFileVaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFileVaultManager.swift; sourceTree = "<group>"; };
+		FBA31C7A2D73AC0100D807F3 /* tenant_migration.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = tenant_migration.sh; sourceTree = "<group>"; };
+		FBA31C802D73AD6000D807F3 /* ScriptMigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptMigrationManager.swift; sourceTree = "<group>"; };
+		FBB5C34C2D7DC21C006498F0 /* reissueKey.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = reissueKey.sh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		FBAC7B0A2D66237D0098788D /* Exceptions for "JUMP-IN-Helper" folder in "Copy Files" phase from "JUMP-IN" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = FBAC7B082D6623680098788D /* CopyFiles */;
+			membershipExceptions = (
+				"com.IRL.jump-in.helper.plist",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FB3D29222D65C79000F9463C /* JUMP-IN */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "JUMP-IN";
+			sourceTree = "<group>";
+		};
+		FB3D29342D65C79100F9463C /* JUMP-INTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "JUMP-INTests";
+			sourceTree = "<group>";
+		};
+		FB3D293E2D65C79100F9463C /* JUMP-INUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "JUMP-INUITests";
+			sourceTree = "<group>";
+		};
+		FB3D299C2D65D00000F9463C /* JUMP-IN-Helper */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FBAC7B0A2D66237D0098788D /* Exceptions for "JUMP-IN-Helper" folder in "Copy Files" phase from "JUMP-IN" target */,
+			);
+			path = "JUMP-IN-Helper";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB3D291D2D65C79000F9463C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB3D292E2D65C79100F9463C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB3D29382D65C79100F9463C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB3D29982D65D00000F9463C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB3D29172D65C79000F9463C = {
+			isa = PBXGroup;
+			children = (
+				FB3D29942D65CE9600F9463C /* Resources */,
+				FB3D298C2D65CE8900F9463C /* Services */,
+				FB3D297E2D65CE8000F9463C /* Views */,
+				FB3D29722D65CE7700F9463C /* Models */,
+				FB3D296D2D65CE5800F9463C /* commands */,
+				FB3D29682D65CE3500F9463C /* Shared */,
+				FB3D29652D65CD7400F9463C /* BuildScripts */,
+				FB3D29222D65C79000F9463C /* JUMP-IN */,
+				FB3D29342D65C79100F9463C /* JUMP-INTests */,
+				FB3D293E2D65C79100F9463C /* JUMP-INUITests */,
+				FB3D299C2D65D00000F9463C /* JUMP-IN-Helper */,
+				FB3D29212D65C79000F9463C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB3D29212D65C79000F9463C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB3D29202D65C79000F9463C /* JUMP-IN.app */,
+				FB3D29312D65C79100F9463C /* JUMP-INTests.xctest */,
+				FB3D293B2D65C79100F9463C /* JUMP-INUITests.xctest */,
+				FB3D299B2D65D00000F9463C /* com.IRL.jump-in.helper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB3D29652D65CD7400F9463C /* BuildScripts */ = {
+			isa = PBXGroup;
+			children = (
+				FB3D29662D65CE2F00F9463C /* PropertyListModifier.swift */,
+			);
+			path = BuildScripts;
+			sourceTree = "<group>";
+		};
+		FB3D29682D65CE3500F9463C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FB3D29692D65CE4200F9463C /* Logger.swift */,
+				FB3D296B2D65CE5300F9463C /* MigrationTypes.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		FB3D296D2D65CE5800F9463C /* commands */ = {
+			isa = PBXGroup;
+			children = (
+				FB3D296E2D65CE6E00F9463C /* ShellCommand.swift */,
+			);
+			path = commands;
+			sourceTree = "<group>";
+		};
+		FB3D29722D65CE7700F9463C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB3D296F2D65CE7700F9463C /* AppState.swift */,
+				FB3D29702D65CE7700F9463C /* MigrationState.swift */,
+				FB3D29712D65CE7700F9463C /* SystemRequirements.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB3D297E2D65CE8000F9463C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB491BDC2D7CA8CA00F95204 /* filevaultrotationview.swift */,
+				FB3D29762D65CE8000F9463C /* SplashView.swift */,
+				FB3D29772D65CE8000F9463C /* RequestPrivilegesView.swift */,
+				FB3D29782D65CE8000F9463C /* TenantSwitcherApp.swift */,
+				FB3D29792D65CE8000F9463C /* PrivilegeManager.swift */,
+				FB3D297A2D65CE8000F9463C /* MigrationProgressView.swift */,
+				FB3D297B2D65CE8000F9463C /* PreRequisitesView.swift */,
+				FB3D297C2D65CE8000F9463C /* WelcomeView.swift */,
+				FB3D297D2D65CE8000F9463C /* MigrationContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB3D298C2D65CE8900F9463C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FB3D29872D65CE8900F9463C /* HelperToolServiceManager.swift */,
+				FB3D29882D65CE8900F9463C /* DialogService.swift */,
+				FB3D29892D65CE8900F9463C /* PrivilegedService.swift */,
+				FB3D298A2D65CE8900F9463C /* NotificationService.swift */,
+				FB3D298B2D65CE8900F9463C /* MigrationService.swift */,
+				FBA31C802D73AD6000D807F3 /* ScriptMigrationManager.swift */,
+				FB544A032D75C264002EB8EE /* MDMDetectionService.swift */,
+				FB544A052D75C2A2002EB8EE /* MDMVendorRegistry.swift */,
+				FB544A072D75C324002EB8EE /* MDMVendorHandler.swift */,
+				FB544A092D75C35B002EB8EE /* MDMMigrationStrategy.swift */,
+				FB544A0B2D75C387002EB8EE /* ConfigurationMapper.swift */,
+				FB87521E2D76FB63007B94B9 /* PrivilegedTaskManager.swift */,
+				FB8752202D773817007B94B9 /* SecureFileVaultManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FB3D29942D65CE9600F9463C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBB5C34C2D7DC21C006498F0 /* reissueKey.sh */,
+				FBA31C7A2D73AC0100D807F3 /* tenant_migration.sh */,
+				FB3D29932D65CE9600F9463C /* Info.plist */,
+				FB3D29C12D65D13200F9463C /* jump-in.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB3D291F2D65C79000F9463C /* JUMP-IN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB3D29452D65C79100F9463C /* Build configuration list for PBXNativeTarget "JUMP-IN" */;
+			buildPhases = (
+				FB3D291C2D65C79000F9463C /* Sources */,
+				FB3D291D2D65C79000F9463C /* Frameworks */,
+				FB3D291E2D65C79000F9463C /* Resources */,
+				FBAC7B062D6623440098788D /* CopyFiles */,
+				FBAC7B082D6623680098788D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBAC7B0C2D6626110098788D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FB3D29222D65C79000F9463C /* JUMP-IN */,
+			);
+			name = "JUMP-IN";
+			packageProductDependencies = (
+			);
+			productName = "macOS-Tenant-Switcher";
+			productReference = FB3D29202D65C79000F9463C /* JUMP-IN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB3D29302D65C79100F9463C /* JUMP-INTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB3D29482D65C79100F9463C /* Build configuration list for PBXNativeTarget "JUMP-INTests" */;
+			buildPhases = (
+				FB3D292D2D65C79100F9463C /* Sources */,
+				FB3D292E2D65C79100F9463C /* Frameworks */,
+				FB3D292F2D65C79100F9463C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB3D29332D65C79100F9463C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FB3D29342D65C79100F9463C /* JUMP-INTests */,
+			);
+			name = "JUMP-INTests";
+			packageProductDependencies = (
+			);
+			productName = "macOS-Tenant-SwitcherTests";
+			productReference = FB3D29312D65C79100F9463C /* JUMP-INTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB3D293A2D65C79100F9463C /* JUMP-INUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB3D294B2D65C79100F9463C /* Build configuration list for PBXNativeTarget "JUMP-INUITests" */;
+			buildPhases = (
+				FB3D29372D65C79100F9463C /* Sources */,
+				FB3D29382D65C79100F9463C /* Frameworks */,
+				FB3D29392D65C79100F9463C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB3D293D2D65C79100F9463C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FB3D293E2D65C79100F9463C /* JUMP-INUITests */,
+			);
+			name = "JUMP-INUITests";
+			packageProductDependencies = (
+			);
+			productName = "macOS-Tenant-SwitcherUITests";
+			productReference = FB3D293B2D65C79100F9463C /* JUMP-INUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FB3D299A2D65D00000F9463C /* JUMP-IN-Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB3D299F2D65D00000F9463C /* Build configuration list for PBXNativeTarget "JUMP-IN-Helper" */;
+			buildPhases = (
+				FB3D29972D65D00000F9463C /* Sources */,
+				FB3D29982D65D00000F9463C /* Frameworks */,
+				FB3D29992D65D00000F9463C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FB3D299C2D65D00000F9463C /* JUMP-IN-Helper */,
+			);
+			name = "JUMP-IN-Helper";
+			packageProductDependencies = (
+			);
+			productName = "macOS-Tenant-Switcher-Helper";
+			productReference = FB3D299B2D65D00000F9463C /* com.IRL.jump-in.helper */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB3D29182D65C79000F9463C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					FB3D291F2D65C79000F9463C = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					FB3D29302D65C79100F9463C = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = FB3D291F2D65C79000F9463C;
+					};
+					FB3D293A2D65C79100F9463C = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = FB3D291F2D65C79000F9463C;
+					};
+					FB3D299A2D65D00000F9463C = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = FB3D291B2D65C79000F9463C /* Build configuration list for PBXProject "JUMP-IN" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB3D29172D65C79000F9463C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FB3D29212D65C79000F9463C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB3D291F2D65C79000F9463C /* JUMP-IN */,
+				FB3D29302D65C79100F9463C /* JUMP-INTests */,
+				FB3D293A2D65C79100F9463C /* JUMP-INUITests */,
+				FB3D299A2D65D00000F9463C /* JUMP-IN-Helper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB3D291E2D65C79000F9463C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB3D29962D65CE9600F9463C /* Info.plist in Resources */,
+				FBA31C7B2D73AC1400D807F3 /* tenant_migration.sh in Resources */,
+				FBB5C34D2D7DC21C006498F0 /* reissueKey.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB3D292F2D65C79100F9463C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB3D29392D65C79100F9463C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB3D291C2D65C79000F9463C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB3D296C2D65CE5300F9463C /* MigrationTypes.swift in Sources */,
+				FB3D29672D65CE2F00F9463C /* PropertyListModifier.swift in Sources */,
+				FB3D297F2D65CE8000F9463C /* PrivilegeManager.swift in Sources */,
+				FB544A082D75C324002EB8EE /* MDMVendorHandler.swift in Sources */,
+				FB3D29802D65CE8000F9463C /* TenantSwitcherApp.swift in Sources */,
+				FB3D29812D65CE8000F9463C /* PreRequisitesView.swift in Sources */,
+				FB3D29822D65CE8000F9463C /* RequestPrivilegesView.swift in Sources */,
+				FB544A042D75C264002EB8EE /* MDMDetectionService.swift in Sources */,
+				FB544A0A2D75C35B002EB8EE /* MDMMigrationStrategy.swift in Sources */,
+				FB3D29832D65CE8000F9463C /* MigrationContentView.swift in Sources */,
+				FB3D29842D65CE8000F9463C /* WelcomeView.swift in Sources */,
+				FB3D29852D65CE8000F9463C /* MigrationProgressView.swift in Sources */,
+				FB544A062D75C2A2002EB8EE /* MDMVendorRegistry.swift in Sources */,
+				FB3D29862D65CE8000F9463C /* SplashView.swift in Sources */,
+				FB3D298D2D65CE8900F9463C /* HelperToolServiceManager.swift in Sources */,
+				FB3D298E2D65CE8900F9463C /* MigrationService.swift in Sources */,
+				FB3D298F2D65CE8900F9463C /* NotificationService.swift in Sources */,
+				FB8752212D773817007B94B9 /* SecureFileVaultManager.swift in Sources */,
+				FB87521F2D76FB63007B94B9 /* PrivilegedTaskManager.swift in Sources */,
+				FBA31C812D73AD6000D807F3 /* ScriptMigrationManager.swift in Sources */,
+				FB3D29902D65CE8900F9463C /* DialogService.swift in Sources */,
+				FB3D29912D65CE8900F9463C /* PrivilegedService.swift in Sources */,
+				FB3D29732D65CE7700F9463C /* AppState.swift in Sources */,
+				FB3D29742D65CE7700F9463C /* SystemRequirements.swift in Sources */,
+				FB3D29752D65CE7700F9463C /* MigrationState.swift in Sources */,
+				FB491BDD2D7CA8CA00F95204 /* filevaultrotationview.swift in Sources */,
+				FB3D296A2D65CE4200F9463C /* Logger.swift in Sources */,
+				FB544A0C2D75C387002EB8EE /* ConfigurationMapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB3D292D2D65C79100F9463C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB3D29372D65C79100F9463C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB3D29972D65D00000F9463C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBAC7A922D65F72D0098788D /* MigrationTypes.swift in Sources */,
+				FBAC7A912D65F7270098788D /* Logger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB3D29332D65C79100F9463C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB3D291F2D65C79000F9463C /* JUMP-IN */;
+			targetProxy = FB3D29322D65C79100F9463C /* PBXContainerItemProxy */;
+		};
+		FB3D293D2D65C79100F9463C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB3D291F2D65C79000F9463C /* JUMP-IN */;
+			targetProxy = FB3D293C2D65C79100F9463C /* PBXContainerItemProxy */;
+		};
+		FBAC7B0C2D6626110098788D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB3D299A2D65D00000F9463C /* JUMP-IN-Helper */;
+			targetProxy = FBAC7B0B2D6626110098788D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FB3D29432D65C79100F9463C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB3D29442D65C79100F9463C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FB3D29462D65C79100F9463C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Resources/jump-in.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"JUMP-IN/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = LJ3W53UDG4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "JUMP-IN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IRL.jump-in";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "com.IRL.jump-in";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FB3D29472D65C79100F9463C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Resources/jump-in.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"JUMP-IN/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = LJ3W53UDG4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "JUMP-IN";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IRL.jump-in";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "com.IRL.jump-in";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FB3D29492D65C79100F9463C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJ3W53UDG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IRL.jump-inTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JUMP-IN.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JUMP-IN";
+			};
+			name = Debug;
+		};
+		FB3D294A2D65C79100F9463C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJ3W53UDG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IRL.jump-inTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JUMP-IN.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JUMP-IN";
+			};
+			name = Release;
+		};
+		FB3D294C2D65C79100F9463C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJ3W53UDG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IRL.jump-inUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "macOS-Tenant-Switcher";
+			};
+			name = Debug;
+		};
+		FB3D294D2D65C79100F9463C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJ3W53UDG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IRL.jump-inUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "macOS-Tenant-Switcher";
+			};
+			name = Release;
+		};
+		FB3D29A02D65D00000F9463C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = LJ3W53UDG4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IRL.jump-in.helper";
+				PRODUCT_NAME = "com.IRL.jump-in.helper";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FB3D29A12D65D00000F9463C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = LJ3W53UDG4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IRL.jump-in.helper";
+				PRODUCT_NAME = "com.IRL.jump-in.helper";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB3D291B2D65C79000F9463C /* Build configuration list for PBXProject "JUMP-IN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB3D29432D65C79100F9463C /* Debug */,
+				FB3D29442D65C79100F9463C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB3D29452D65C79100F9463C /* Build configuration list for PBXNativeTarget "JUMP-IN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB3D29462D65C79100F9463C /* Debug */,
+				FB3D29472D65C79100F9463C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB3D29482D65C79100F9463C /* Build configuration list for PBXNativeTarget "JUMP-INTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB3D29492D65C79100F9463C /* Debug */,
+				FB3D294A2D65C79100F9463C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB3D294B2D65C79100F9463C /* Build configuration list for PBXNativeTarget "JUMP-INUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB3D294C2D65C79100F9463C /* Debug */,
+				FB3D294D2D65C79100F9463C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB3D299F2D65D00000F9463C /* Build configuration list for PBXNativeTarget "JUMP-IN-Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB3D29A02D65D00000F9463C /* Debug */,
+				FB3D29A12D65D00000F9463C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB3D29182D65C79000F9463C /* Project object */;
+}

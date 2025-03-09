@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>JUMP-IN</string>
+    <key>CFBundleExecutable</key>
+    <string>JUMP-IN</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.IRL.jump-in</string>
+    <key>CFBundleName</key>
+    <string>JUMP-IN</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+        <string>MacOSX</string>
+    </array>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.utilities</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>LSApplicationQueriesSchemes</key>
+        <array>
+            <string>x-apple.systempreferences</string>
+        </array>
+    <key>NSFileAccessUsageDescription</key>
+    <string>File access is required to backup your current tenant settings and ensure a smooth migration process.</string>
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>This app uses Apple Events to install necessary helper tools for tenant migration operations.</string>
+    <key>NSRequiresAquaSystemAppearance</key>
+    <true/>
+    <key>NSSystemAdministrationUsageDescription</key>
+    <string>This app requires administrative privileges to migrate your device from any MDM Solution to Microsoft Intune tenants. It will safely remove the current MDM configuration and help enroll in the new tenant.</string>
+    <key>SMPrivilegedExecutables</key>
+    <dict>
+        <key>com.IRL.jump-in.helper</key>
+        <string>identifier "com.IRL.jump-in.helper" and anchor apple generic</string>
+    </dict>
+</dict>
+</plist>
