@@ -26,6 +26,26 @@ JUMP-IN detects and migrates from the following MDM solutions:
 | Mosyle | ✅ |
 | Addigy | ✅ |
 
+### Required Setup Steps
+
+#### 1. Apple Business Manager (ABM) Configuration
+- Assign the Mac device to Apple Business Manager
+- Verify the device appears in ABM inventory
+- Ensure ABM has the correct MDM server tokens
+
+#### 2. Microsoft Intune Configuration
+- Sync ABM token in Intune Admin Center
+- Verify the sync completed successfully
+- Assign required device profiles
+  - Enrollment profile
+  - Configuration profiles
+  - Compliance policies
+
+#### 3. Synchronization
+- Wait for ABM-Intune sync to complete
+- Verify device appears in Intune inventory
+- Confirm profile assignments are active
+
 ### Migration Process
 
 JUMP-IN handles the entire migration workflow:
