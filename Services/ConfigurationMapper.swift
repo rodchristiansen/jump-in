@@ -534,8 +534,6 @@ class ConfigurationMapper {
     
     /// Map a source MDM setting to its Intune equivalent
     private func mapToIntuneEquivalent(key: String, value: String, category: ConfigCategory) -> String {
-        // This is a simplified mapping - a real implementation would have a more comprehensive database
-        // of mappings between different MDM vendors and Intune
         
         let keyLower = key.lowercased()
         
