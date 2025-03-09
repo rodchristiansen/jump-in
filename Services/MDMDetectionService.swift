@@ -375,7 +375,7 @@ class MDMDetectionService {
             }
         }
         
-        // Try alternate AirWatch Agent approach
+        
         if FileManager.default.fileExists(atPath: "/Applications/VMware AirWatch Agent.app") {
             do {
                 let plistPath = "/Applications/VMware AirWatch Agent.app/Contents/Info.plist"
@@ -391,7 +391,7 @@ class MDMDetectionService {
         return nil
     }
     
-    /// Attempt to get more detailed vendor information
+    
     func getDetailedVendorInfo(_ vendor: MDMVendorInfo) async -> MDMVendorInfo {
         // Start with the basic info
         var identifier = vendor.identifier
@@ -400,7 +400,7 @@ class MDMDetectionService {
         var managementType = vendor.managementType
         var profileIdentifiers = vendor.profileIdentifiers
         
-        // Try to get more details based on vendor
+        
         switch vendor.identifier {
             case "jamf":
                 // Try to get more Jamf details (server URL, etc.)
