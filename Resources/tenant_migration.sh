@@ -149,7 +149,6 @@ detect_mdm_vendor() {
         return 0
     }
     
-    # And so on for each vendor check...
     
     # No MDM detected
     CURRENT_MDM="none"
@@ -275,7 +274,7 @@ detect_mdm_vendor() {
         return 0
     fi
     
-    # Check for VMware Workspace ONE/AirWatch - comprehensive detection
+    # Check for VMware Workspace ONE/AirWatch
 if echo "$profiles_output" | grep -q -E '(com\.air-watch|com\.airwatch|com\.vmware)' ||
    [ -d "/Applications/Workspace ONE Intelligent Hub.app" ] ||
    [ -d "/Applications/VMware AirWatch Agent.app" ] ||
