@@ -51,7 +51,7 @@ class AppState: ObservableObject {
                }
            }
            
-           // Don't try to get helper proxy here - consider installation success sufficient
+           
            logger.info("Authorization successful")
            isAuthorized = true
            showError = false
