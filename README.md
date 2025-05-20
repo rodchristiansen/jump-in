@@ -25,6 +25,7 @@ JUMP-IN detects and migrates from the following MDM solutions:
 | Kandji | ✅ |
 | Mosyle | ✅ |
 | Addigy | ✅ |
+| MicroMDM | ✅ |
 
 ### Required Setup Steps
 
@@ -106,6 +107,7 @@ No, JUMP-IN performs a non-destructive migration without wiping devices or remov
 
 ### Does JUMP-IN support mass deployment?
 Yes, JUMP-IN can be deployed via command line with automation tools like Jamf Pro, Microsoft Intune, or shell scripts.
+For MicroMDM environments, use the `Resources/micromdm_push_package.sh` script to automate migration to Intune.
 
 ### What permissions does JUMP-IN require?
 JUMP-IN requires administrator privileges to remove MDM profiles and install the helper tool.

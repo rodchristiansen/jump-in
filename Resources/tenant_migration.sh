@@ -273,6 +273,13 @@ detect_mdm_vendor() {
         echo "$(date) | Detected Mosyle MDM"
         return 0
     fi
+
+    # Check for MicroMDM
+    if echo "$profiles_output" | grep -qi 'micromdm'; then
+        CURRENT_MDM="micromdm"
+        echo "$(date) | Detected MicroMDM"
+        return 0
+    fi
     
     # Check for VMware Workspace ONE/AirWatch
 if echo "$profiles_output" | grep -q -E '(com\.air-watch|com\.airwatch|com\.vmware)' ||
@@ -672,6 +679,11 @@ remove_mdm_profiles() {
                 echo "$(date) | Removing profile: $profile_id"
                 profiles remove -identifier "$profile_id"
             done
+            ;;
+
+        micromdm)
+            echo "$(date) | Removing MicroMDM profile"
+            profiles remove -identifier "io.micromdm.mdm" 2>/dev/null || true
             ;;
             
         workspace)
