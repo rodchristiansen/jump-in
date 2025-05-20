@@ -282,6 +282,25 @@ class MDMVendorRegistry {
                     "profiles -D"
                 ],
                 detectionPriority: 100
+            ),
+            "micromdm": MDMVendorDefinition(
+                identifier: "micromdm",
+                displayName: "MicroMDM",
+                profilePatterns: [
+                    "io.micromdm",
+                    "micromdm.io",
+                    "com.github.micromdm"
+                ],
+                binaryPaths: [],
+                certificatePatterns: [
+                    "MicroMDM CA"
+                ],
+                agentPaths: [],
+                managementType: "Full MDM",
+                removalCommands: [
+                    "profiles remove -identifier 'io.micromdm.mdm'"
+                ],
+                detectionPriority: 110
             )
         ]
         

@@ -54,6 +54,7 @@ class MDMDetectionService {
         "hexnode": ["com.hexnode", "me.hexnode"],
         "meraki": ["com.meraki"],
         "filewave": ["com.filewave"],
+        "micromdm": ["io.micromdm", "micromdm.io", "com.github.micromdm"],
         "microsoft": ["com.microsoft.intune", "com.microsoft.enterprise", "Microsoft.Intune", "Microsoft.Profiles"],
         "apple": ["com.apple.mdm", "com.apple.configuration"]
     ]
@@ -236,7 +237,11 @@ class MDMDetectionService {
             if certsOutput.contains("mosyle") || certsOutput.contains("Mosyle") {
                 return await createVendorInfo("mosyle", certsOutput: certsOutput)
             }
-            
+
+            if certsOutput.contains("MicroMDM") {
+                return await createVendorInfo("micromdm", certsOutput: certsOutput)
+            }
+
             if certsOutput.contains("vmware") || certsOutput.contains("airwatch") || certsOutput.contains("workspace") || certsOutput.contains("awmdm") {
                 return await createVendorInfo("workspace", certsOutput: certsOutput)
             }
@@ -284,6 +289,7 @@ class MDMDetectionService {
            FileManager.default.fileExists(atPath: "/Library/Application Support/AirWatch") {
             return await createVendorInfo("workspace", fromBinary: true)
         }
+
         
         // Check for Intune Company Portal
         if FileManager.default.fileExists(atPath: "/Applications/Company Portal.app") {
@@ -321,6 +327,11 @@ class MDMDetectionService {
                 displayName = "VMware Workspace ONE"
                 version = await extractWorkspaceOneVersion()
                 profileIdentifiers = knownVendors["workspace"] ?? ["com.air-watch"]
+
+            case "micromdm":
+                displayName = "MicroMDM"
+                version = nil
+                profileIdentifiers = knownVendors["micromdm"] ?? ["io.micromdm"]
                 
             default:
                 displayName = vendorId.capitalized + " MDM"
